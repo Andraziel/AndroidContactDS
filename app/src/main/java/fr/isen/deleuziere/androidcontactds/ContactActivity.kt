@@ -17,13 +17,13 @@ class ContactActivity : AppCompatActivity() {
         val contact = intent.getSerializableExtra("contact") as Results
 
         val actionBar = supportActionBar
-        actionBar?.title = contact.name?.first + contact.name?.last
+        actionBar?.title = contact.name?.first + " " + contact.name?.last
 
         val image = contact.picture?.large
         if (image != "") { Picasso.get().load(image).into(binding.imageDetail) }
 
-        binding.nomDetail.text = contact.name?.first
-        binding.prenomDetail.text = contact.name?.last
+        binding.nomDetail.text = contact.name?.last
+        binding.prenomDetail.text = contact.name?.first
 
         val streetNumber = contact.location?.street?.number.toString()
         val streetName = contact.location?.street?.name
@@ -32,6 +32,9 @@ class ContactActivity : AppCompatActivity() {
         binding.adresseDetail.text = streetNumber + " " + streetName + " " + city
 
         binding.emailDetail.text = contact.email
-        binding.numeroDetail.text =contact.cell
+        binding.numeroDetail.text = contact.cell
+
+        binding.naissanceDetail.text = contact.dob?.date
+
     }
 }

@@ -48,10 +48,8 @@ class MainActivity : AppCompatActivity() {
         val jsonObject = JSONObject()
         val jsonRequest = JsonObjectRequest(
             Request.Method.GET, url, jsonObject, {
-                Log.w("Debug", "reponse : $it")
                 manageData(it.toString())
             }, {
-                Log.w("Debug", "erreur : $it")
             }
         )
         Volley.newRequestQueue(this).add(jsonRequest)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#000000</color>
-    <color name="secondary">#282A3A</color>
-    <color name="tertiary">#735F32</color>
-    <color name="option">#C69749</color>
+    <color name="primary">#041C32</color>
+    <color name="secondary">#04293A</color>
+    <color name="tertiary">#064663</color>
+    <color name="option">#ECB365</color>
 
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>

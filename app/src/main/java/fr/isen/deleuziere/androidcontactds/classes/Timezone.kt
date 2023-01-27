@@ -8,4 +8,4 @@ data class Timezone (
   @SerializedName("offset"      ) var offset      : String? = null,
   @SerializedName("description" ) var description : String? = null
 
-)
+):java.io.Serializable

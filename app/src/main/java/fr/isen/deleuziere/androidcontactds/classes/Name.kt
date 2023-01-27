@@ -9,4 +9,4 @@ data class Name (
   @SerializedName("first" ) var first : String? = null,
   @SerializedName("last"  ) var last  : String? = null
 
-)
+):java.io.Serializable

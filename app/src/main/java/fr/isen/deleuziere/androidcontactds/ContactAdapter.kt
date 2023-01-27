@@ -31,20 +31,15 @@ class ContactAdapter(private var contacts: ArrayList<Results>, val OnClick: (nam
 
         holder.prenomText.text = contact.name?.first
         holder.nomText.text = contact.name?.last
-        val  streetNumber =contact.location?.street?.number.toString()
+        val streetNumber =contact.location?.street?.number.toString()
         val streetName = contact.location?.street?.name
         val city = contact.location?.city
-        holder.adresseText.text =  streetNumber + streetName + city
+        holder.adresseText.text =  streetNumber + " " + streetName + " " + city
         holder.emailText.text = contact.email
 
-        val image = contact.picture?.medium
+        val image = contact.picture?.large
         if (image != "") { Picasso.get().load(image).into(holder.imageView) }
-/*
-        var price:String? =""
-        for (i in dish.prices) {
-            price = price + i.price + "€ "
-        }
-        holder.priceValue.text = price*/
+
 
         holder.itemView.setOnClickListener {
             OnClick(contact)

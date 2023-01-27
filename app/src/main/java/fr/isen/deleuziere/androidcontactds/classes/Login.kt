@@ -13,4 +13,4 @@ data class Login (
   @SerializedName("sha1"     ) var sha1     : String? = null,
   @SerializedName("sha256"   ) var sha256   : String? = null
 
-)
+):java.io.Serializable

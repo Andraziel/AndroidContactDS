@@ -13,4 +13,4 @@ data class Location (
   @SerializedName("coordinates" ) var coordinates : Coordinates? = Coordinates(),
   @SerializedName("timezone"    ) var timezone    : Timezone?    = Timezone()
 
-)
+):java.io.Serializable

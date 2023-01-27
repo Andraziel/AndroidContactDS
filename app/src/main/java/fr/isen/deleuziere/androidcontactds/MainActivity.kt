@@ -1,5 +1,6 @@
 package fr.isen.deleuziere.androidcontactds
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -32,7 +33,11 @@ class MainActivity : AppCompatActivity() {
         binding.contactList.layoutManager = LinearLayoutManager(this)
 
         binding.contactList.adapter = ContactAdapter(value) {
-            Log.w("adapter", "value : $it")
+            val intent = Intent(this, ContactActivity::class.java)
+
+            intent.putExtra("contact",it)
+
+            startActivity(intent)
         }
         loadContactsFromAPI()
     }

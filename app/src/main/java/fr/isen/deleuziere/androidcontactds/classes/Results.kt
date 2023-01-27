@@ -18,4 +18,4 @@ data class Results (
   @SerializedName("picture"    ) var picture    : Picture?    = Picture(),
   @SerializedName("nat"        ) var nat        : String?     = null
 
-)
+):java.io.Serializable
